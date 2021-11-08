@@ -1,3 +1,3 @@
 export function Counter(dollarage) {
-  return;
+  return dollarage;
 }
