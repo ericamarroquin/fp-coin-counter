@@ -1,7 +1,11 @@
-export function Counter(dollarage) {
+export const counter = (dollarage) => {
   if (isNaN(dollarage)){
-    return "WRONG!"
-  } else {
+    return "WRONG INPUT! >["
+  } 
+  if (dollarage <= 0) {
+    return "Finished! Your total is $" + dollarage; 
+  }
+  else {
     return dollarage;
   }
 }
@@ -21,4 +25,7 @@ export function Counter(dollarage) {
 //     console.log(counter);
 //     return incrementCounter(counter + 1);
 //   }
-// }
+// } 
+
+//if counter <= 0
+
