@@ -1,9 +1,9 @@
 export function Counter(dollarage) {
-  // if (isNaN(dollarage)){
-  //   return "WRONG!"
-  // } else {
+  if (isNaN(dollarage)){
+    return "WRONG!"
+  } else {
     return dollarage;
-  // }
+  }
 }
 
 
