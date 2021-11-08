@@ -1,4 +1,5 @@
 export const counter = (dollarage) => {
+  return (coinage) => {
   if (isNaN(dollarage)){
     return "WRONG INPUT! >["
   } 
@@ -6,8 +7,9 @@ export const counter = (dollarage) => {
     return "Finished! Your total is $" + dollarage; 
   }
   else {
-    return dollarage;
+    return dollarage * coinage;
   }
+}
 }
 
 
