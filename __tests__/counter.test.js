@@ -7,4 +7,9 @@ describe ('Counter', () => {
     expect(counter).toEqual(6.66); 
   });
 
+  test('should correctly determine if input is a number', () => {
+    const counter = Counter("bloop");
+    expect(counter).toEqual("WRONG!");
+  })
+
 });
