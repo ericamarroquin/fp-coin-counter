@@ -44,15 +44,18 @@ export const counter = (dollarage) => {
   if (dollarage <= 0) {
     return "& none";
   }
-  const coinage = dollarage * 100;
+  const coinage = Math.floor(dollarage * 100);
   if (coinage >= 25) {
-    const quarters = coinage / 25;
-    const newDollarage = dollarage - ((quarters * 25)/100);
-    return quarters + " quarters " + counter(newDollarage);
-  } else {
-    return "no more quarters :[";
+    const quarters = Math.floor(coinage / 25);
+    const newDollarage = (dollarage - ((quarters * 25)/100)).toFixed(2);
+    return quarters + " quarters, " + counter(newDollarage);
+  } else if (coinage >= 10) {
+    const dimes = Math.floor(coinage / 10);
+    const newDollarage = dollarage - ((dimes * 10)/100);
+    return dimes + " dimes, " + counter(newDollarage);
   }
 } 
+
 
 /*
 8.73

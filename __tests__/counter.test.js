@@ -19,9 +19,14 @@ describe ('counter', () => {
 
   test('should return number of quarters in coinage', () => {
     const count = counter(1.00);
-    expect(count).toEqual("4 quarters & none");
+    expect(count).toEqual("4 quarters, & none");
   });
-  
+
+  test('should return number of quarters & dimes in coinage', () => {
+    const count = counter(1.10);
+    expect(count).toEqual("4 quarters, 1 dimes, & none");
+  })
+
   // test('should return dollarage multiplied by 10', () => {
   //   const dollars = counter(6.66);
   //   const dimes = dollars(10);
