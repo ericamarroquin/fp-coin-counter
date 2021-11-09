@@ -51,8 +51,12 @@ export const counter = (dollarage) => {
     return quarters + " quarters, " + counter(newDollarage);
   } else if (coinage >= 10) {
     const dimes = Math.floor(coinage / 10);
-    const newDollarage = dollarage - ((dimes * 10)/100);
+    const newDollarage = (dollarage - ((dimes * 10)/100)).toFixed(2);
     return dimes + " dimes, " + counter(newDollarage);
+  } else if (coinage >= 5) {
+    const nickels = Math.floor(coinage/5);
+    const newDollarage = (dollarage - ((nickels * 5)/100)).toFixed(2);
+    return nickels + " nickels, " + counter(newDollarage);
   }
 } 
 
