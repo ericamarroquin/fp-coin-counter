@@ -25,12 +25,17 @@ describe ('counter', () => {
   test('should return number of quarters & dimes in coinage', () => {
     const count = counter(1.10);
     expect(count).toEqual("4 quarters, 1 dimes, & none");
-  })
+  });
 
   test('should return number of quarters, dimes & nickels in coinage', () => {
     const count = counter(1.15);
     expect(count).toEqual("4 quarters, 1 dimes, 1 nickels, & none");
-  })
+  });
+
+  test('should return number of quarters, dimes, nickels, & pennies in coinage', () => {
+    const count = counter(1.17);
+    expect(count).toEqual("4 quarters, 1 dimes, 1 nickels, 2 pennies, & none");
+  });
 
   // test('should return dollarage multiplied by 10', () => {
   //   const dollars = counter(6.66);

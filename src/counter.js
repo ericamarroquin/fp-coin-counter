@@ -57,6 +57,9 @@ export const counter = (dollarage) => {
     const nickels = Math.floor(coinage/5);
     const newDollarage = (dollarage - ((nickels * 5)/100)).toFixed(2);
     return nickels + " nickels, " + counter(newDollarage);
+  } else {
+    const newDollarage = (dollarage - (coinage)).toFixed(2);
+    return coinage + " pennies, " + counter(newDollarage);
   }
 } 
 
